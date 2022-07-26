@@ -1,0 +1,10 @@
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-position: left
+    page-layout: full
+
+editor: source
+

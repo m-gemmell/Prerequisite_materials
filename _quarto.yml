@@ -2,18 +2,59 @@ project:
   type: website
 
 website:
-  title: "Prerequisite_materials"
+  title: "Workshop Pre-requisite materials"
+  search: true
   navbar:
     left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+      - text: "Home"
+        file: index.qmd
+      - text: "Unix"
+        file: Intro_to_unix/index.qmd
+  
+  sidebar:
+    - id: Unix
+      Title: "Intro to Unix"
+      style: "floating"
+      collapse-level: 2
+      align: left
+      contents:
+        - Intro_to_unix/index.qmd
+        - section: Part 1
+          contents:
+          - Intro_to_unix/02-Linux_Introduction.qmd
+          - Intro_to_unix/03-Starting.qmd
+          - Intro_to_unix/04-Directories_and_Files.qmd
+          - Intro_to_unix/05-Tips_and_tricks.qmd
+          - Intro_to_unix/06-Manipulating_directories.qmd
+          - Intro_to_unix/07-Exercise1.qmd
+        - section: Part 2
+          contents:
+          - Intro_to_unix/08-File_reading_and_processing.qmd
+          - Intro_to_unix/09-Recap.qmd
+          - Intro_to_unix/10-Fastq.qmd
+          - Intro_to_unix/11-Exercise2.qmd
+        - section: Advanced topics
+          contents:
+          - Intro_to_unix/12-Advanced_linux_practice.qmd
+          - Intro_to_unix/13-Advanced_practice_exercise.qmd
+          - Intro_to_unix/14-Bioinformatica_languages.qmd
+        - section: Answers
+          contents:
+          - Intro_to_unix/15-Answers.qmd
+        - section: Appendix
+          contents:
+          - Intro_to_unix/16-Appendix.qmd
+    
+    
+        
 
 format:
   html:
     theme: cosmo
     css: styles.css
     toc: true
+    toc-position: left
+    page-layout: full
 
-editor: visual
+editor: source
 

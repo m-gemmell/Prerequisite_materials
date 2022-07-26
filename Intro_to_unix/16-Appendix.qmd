@@ -1,0 +1,95 @@
+#Appendix
+
+## Practical cheat sheet {#cheatsheet}
+
+```{r, fig.align = 'center',out.width= '20%', echo=FALSE }
+knitr::include_graphics(path = "figures/cheatsheet.png", auto_pdf = TRUE)
+```
+
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| **Command** | **Description**                                  | **Usage example**                                          |
++=============+==================================================+============================================================+
+| echo        | Print out a string to screen                     | Echo 'Hello World'                                         |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| man         | Look at the manual page of a command             | man man                                                    |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| clear       | Clear the screen                                 | clear                                                      |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| \<tab\>     | Complete a path or command                       | \<tab\>                                                    |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| cd          | Change directory                                 | cd /directory/path/                                        |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| pwd         | Print Working Directory                          | pwd                                                        |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| ls          | List the contents of a directory                 | ls /directory/path/                                        |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| mkdir       | Make a directory                                 | mkdir /directory/path/new_directory/                       |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| cp          | Copy content to another path                     | cp /directory/path/file.txt /directory/path/new_directory/ |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| mv          | Move content to a new path                       | mv /directory/path/file.txt /directory/path/new_directory/ |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| rm          | Delete content                                   | rm /directory/path/file.txt                                |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| cat         | Print contents of a file to screen               | cat /directory/path/file.txt                               |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| head        | Print out the first n lines of a file to screen  | head -n 10 /directory/path/file.txt                        |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| tail        | Print the last n lines of a file to screen       | tail -n 12 /directory/path/file.txt                        |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| less        | Read a file one page at a time                   | less /directory/path/file.txt                              |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| wc          | Print out line, word and byte count              | wc /directory/path/file.txt                                |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| grep        | Search for lines that contain a specific pattern | grep "pattern" /directory/path/file.txt                    |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+| vim         | Text editor                                      | vim /directory/path/file.txt                               |
++-------------+--------------------------------------------------+------------------------------------------------------------+
+
+## Windows terminals
+
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/windows.png", auto_pdf = TRUE)
+```
+
+If you are on a windows you may need to download a terminal program to `ssh` to a linux cluster. Thankfully Macs come with an in built terminal. Below are a few suggestions of windows terminals:
+
+- [MobaXterm](https://mobaxterm.mobatek.net/)
+- [Putty](https://www.putty.org/)
+- [Ubuntu on Windows](https://www.microsoft.com/en-us/p/ubuntu/9nblggh4msv6?activetab=pivot:overviewtab)
+
+## `ssh`
+
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/turtle_shell.png", auto_pdf = TRUE)
+```
+
+The `ssh` (Secure Shell Protocol) command is used to login into cluster and other machines. For more information on this please see the following online tutorial: https://opensource.com/article/20/9/ssh
+
+## File transferring
+
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/file_transfer.png", auto_pdf = TRUE)
+```
+
+When working with a remote cluster you will most likely want to transfer files from your computer to the cluster and vice versa.
+
+For transferring on windows machine I would suggest [WinSCP](https://winscp.net/eng/index.php).
+
+For transferring on Macs I would suggest [FileZIlla](https://filezilla-project.org/)
+
+## ANACONDA
+
+```{r, fig.align = 'center',out.width= '15%', echo=FALSE }
+knitr::include_graphics(path = "figures/conda.png", auto_pdf = TRUE)
+```
+
+Once you start using bioinformatic tools you will notice that a lot of installing is required. I would highly suggest using ANACONDA's `conda` for this purpose.
+
+Links:
+
+- [ANACONDA main page](https://www.anaconda.com/?modal=nucleus)
+- [Installing ANACONDA](https://docs.anaconda.com/anaconda/install/)
+- [Getting started with `conda`](https://docs.conda.io/projects/conda/en/latest/user-guide/getting-started.html)
+
+Once you are familiar with `conda` I would then suggest using [`mamba`](https://github.com/mamba-org/mamba). This is installed on top of `conda` and improves the speed of `conda`.
